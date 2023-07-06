@@ -1,0 +1,314 @@
+
+sonik@sonika MINGW64 ~/Music/project1 (master)
+$ ls
+
+sonik@sonika MINGW64 ~/Music/project1 (master)
+$ git init
+Initialized empty Git repository in C:/Users/sonik/Music/project1/.git/
+
+sonik@sonika MINGW64 ~/Music/project1 (master)
+$ git add .
+
+sonik@sonika MINGW64 ~/Music/project1 (master)
+$ ls
+index.txt
+
+sonik@sonika MINGW64 ~/Music/project1 (master)
+$ git commit -m 'first commit'
+[master (root-commit) d087a78] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.txt
+
+sonik@sonika MINGW64 ~/Music/project1 (master)
+$ git branch -M main
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git remote add origin https://github.com/sonitiwari/git_ass.git
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 249 bytes | 249.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sonitiwari/git_ass.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ #
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git log
+commit d087a789344c7eb525f47e46224f4fe1b81ccca4 (HEAD -> main, origin/main)
+Author: sonika tiwari <sonikatiwari5620@gmail.comgit config --global user.email sonikatiwari5620@gmail.com>
+Date:   Wed Jul 5 23:24:51 2023 +0100
+
+    first commit
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git branch feature-branch
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git checkout -b feature-branch
+fatal: a branch named 'feature-branch' already exists
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git checkout feature-branch
+Switched to branch 'feature-branch'
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git add .
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git commit -m 'second commit'
+[feature-branch 892c9f4] second commit
+ 1 file changed, 1 insertion(+)
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ ls#
+bash: ls#: command not found
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ ls
+index.txt
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git push -M main
+error: unknown switch `M'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all branches
+    --branches            alias of --all
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --branches or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git branch -M main
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sonitiwari/git_ass.git
+   d087a78..892c9f4  main -> main
+branch 'main' set up to track 'origin/main'.
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git checkout feature-branch
+error: pathspec 'feature-branch' did not match any file(s) known to git
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git checkout feature-branch
+error: pathspec 'feature-branch' did not match any file(s) known to git
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ ls
+index.txt
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git checkout feature-branch
+error: pathspec 'feature-branch' did not match any file(s) known to git
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git fetch origin
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git checkout feature-name
+error: pathspec 'feature-name' did not match any file(s) known to git
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git branch feature-branch
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git checkout feature-brach
+error: pathspec 'feature-brach' did not match any file(s) known to git
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git checkout feature-branch
+Switched to branch 'feature-branch'
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git commit -m 'update index-html'
+On branch feature-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git add .
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git commit -m 'update index-html'
+[feature-branch eb56ba3] update index-html
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git branch -M feature-branch
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git push -u origin feature-branch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'feature-branch' on GitHub by visiting:
+remote:      https://github.com/sonitiwari/git_ass/pull/new/feature-branch
+remote:
+To https://github.com/sonitiwari/git_ass.git
+ * [new branch]      feature-branch -> feature-branch
+branch 'feature-branch' set up to track 'origin/feature-branch'.
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git checkout main
+#Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git merge feature-branch
+Updating 892c9f4..eb56ba3
+Fast-forward
+ index.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git merge main
+Already up to date.
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git checkout feature-branch
+Switched to branch 'feature-branch'
+Your branch is up to date with 'origin/feature-branch'.
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git merge main
+Already up to date.
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git push -u origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sonitiwari/git_ass.git
+   892c9f4..eb56ba3  main -> main
+branch 'main' set up to track 'origin/main'.
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git chechout main
+git: 'chechout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+sonik@sonika MINGW64 ~/Music/project1 (feature-branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git merge feature-branch
+Already up to date.
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git push origin main
+Everything up-to-date
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ cwd
+bash: cwd: command not found
+
+sonik@sonika MINGW64 ~/Music/project1 (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 705 bytes | 21.00 KiB/s, done.
+From https://github.com/sonitiwari/git_ass
+   eb56ba3..14d6aa9  main       -> origin/main
+Updating eb56ba3..14d6aa9
+Fast-forward
+ index.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Update index.txt _n1Revert "Update index.txt_new"
+
+This reverts commit 14d6aa9dc81de3dedf46ded4b8ae642a8b6871e1.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+#   (use "git pull" to update your local branch)
+#
+# Changes to be committed:
+#       modified:   index.txt
+
+
+#############################git cloning###################
+
+sonik@sonika MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git init
+Initialized empty Git repository in C:/Users/sonik/OneDrive/Desktop/New folder/.git/
+
+sonik@sonika MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ git clone https://github.com/sonitiwari/git_ass.git
+Cloning into 'git_ass'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 9 (delta 2), reused 7 (delta 0), pack-reused 0
+Receiving objects: 100% (9/9), done.
+Resolving deltas: 100% (2/2), done.
+
+sonik@sonika MINGW64 ~/OneDrive/Desktop/New folder (master)
+$ 
+
+sonik@sonika MINGW64 ~/OneDrive/Desktop/New folder (master)
+$
